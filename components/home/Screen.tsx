@@ -50,6 +50,9 @@ const Screen = () => {
                             description: data.description
                         }))
 
+                        console.log(details?.geometry.location);
+
+
                         dispath(setDestination(null))
                     }}
                     fetchDetails={true}

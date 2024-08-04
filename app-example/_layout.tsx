@@ -1,8 +1,7 @@
-import { store } from "@/store";
+import store from "@/store";
 import { Stack } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Provider } from 'react-redux'
-import { NavigationContainer } from '@react-navigation/native'
 export default function RootLayout() {
   return (
     <Provider

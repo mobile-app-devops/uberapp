@@ -10,6 +10,8 @@ import { Image } from 'expo-image';
 import tw from 'tailwind-react-native-classnames';
 import { Icon } from '@rneui/themed'
 import { router } from 'expo-router';
+import { useSelector } from 'react-redux';
+import { selectOrigin } from '@/constants/slices/navSlide';
 
 const DATA = [
     {
@@ -27,6 +29,7 @@ const DATA = [
 ]
 
 const NavOptions = () => {
+    const origin = useSelector(selectOrigin);
     return (
         <FlatList
             data={DATA}
@@ -35,7 +38,7 @@ const NavOptions = () => {
                 <TouchableOpacity
                     key={item.id}
                     activeOpacity={0.4}
-                    style={tw`p-2 pl-5 pb-8 pt-4 bg-gray-200 mr-4 w-40 rounded`}
+                    style={tw`p-2 pl-5 pb-8 pt-4 bg-gray-200 mr-4 w-40 rounded ${origin ? 'opacity-100' : "opacity-40"} `}
                     onPress={() => router.navigate(`../${item.screen}`)}
                 >
                     <View>

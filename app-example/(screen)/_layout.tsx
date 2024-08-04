@@ -7,9 +7,6 @@ const ScreenLayout = () => {
         <Stack >
             <Stack.Screen
                 name='mapscreen'
-                options={{
-                    headerShown: false,
-                }}
             />
             <Stack.Screen
                 name='orderfood'
