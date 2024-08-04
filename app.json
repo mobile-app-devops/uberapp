@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "uberapp",
-    "slug": "uberapp",
+    "slug": "uber-c3futureapps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -31,6 +31,7 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "owner": "chenter4444"
   }
 }
