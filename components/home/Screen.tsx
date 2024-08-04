@@ -11,6 +11,7 @@ import NavOptions from './NavOptions';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from '@/constants/slices/navSlide'
+import NavFavourite from './NavFavourite';
 
 const Screen = () => {
     const dispath = useDispatch();
@@ -59,6 +60,8 @@ const Screen = () => {
                 />
 
                 <NavOptions />
+
+                <NavFavourite />
             </View>
         </SafeAreaView>
     )

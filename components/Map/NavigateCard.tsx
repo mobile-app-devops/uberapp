@@ -10,6 +10,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import { useDispatch } from 'react-redux'
 import { setDestination } from '@/constants/slices/navSlide'
 import { useNavigation } from '@react-navigation/native'
+import NavFavourite from '../home/NavFavourite'
 
 const NavigateCard = () => {
     const dispath = useDispatch()
@@ -41,6 +42,7 @@ const NavigateCard = () => {
                     disableScroll={false}
                     keepResultsAfterBlur={true}
                 />
+                <NavFavourite />
             </View>
         </SafeAreaView>
     )
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
     },
     textInput: {
-        backgroundColor: '#DDDDDF',
+        backgroundColor: '#F1F1F1',
         borderRadius: 10,
         fontSize: 18
     },
