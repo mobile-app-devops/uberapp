@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux'
 import { setDestination } from '@/constants/slices/navSlide'
 import { useNavigation } from '@react-navigation/native'
 import NavFavourite from '../home/NavFavourite'
+import IButton from '../ui/IButton'
 
 const NavigateCard = () => {
     const dispath = useDispatch()
@@ -43,6 +44,16 @@ const NavigateCard = () => {
                     keepResultsAfterBlur={true}
                 />
                 <NavFavourite />
+            </View>
+            <View style={tw`flex flex-row items-center justify-around mt-10`} >
+                <IButton
+                    title='Rides'
+                    onPress={() => navigation.navigate("ride_option_card")}
+                />
+
+                <IButton
+                    title='Eats'
+                />
             </View>
         </SafeAreaView>
     )
